@@ -1,0 +1,406 @@
+:root {
+  --heading-font-font-family: "Instrument Serif";
+  --accent-hsl: 143, 66%, 37%; /* hue, saturation, lightness */
+  --heading-1-size-value: 3; /* Base size for h1 in vw */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: white;
+    color: black;
+}
+.header-flex {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: hsla(var(--accent-hsl), 1); 
+    color: white;
+    padding: 10px 20px;
+    position: fixed;  
+    top: 0;            
+    left: 0;
+    width: 100%; 
+    height: 50px;     
+    z-index: 1000;    
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
+.header-logo {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8em;
+}
+
+/* Nav styles */
+.nav-container {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Nav link styles */
+#nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+#nav-links a:hover {
+    background-color: white;
+    color: hsla(var(--accent-hsl), 1);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        background-color: hsla(var(--accent-hsl), 1);
+        position: absolute;
+        top: 60px;
+        right: 0; /* Align mobile menu to the right */
+        width: 100%;
+    }
+
+    nav a {
+        padding: 15px;
+        border-top: 1px solid #fff;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+main {
+    margin-top: 60px; 
+}
+
+/* Banner container */
+.welcome-banner {
+    width: 100%;
+    color: #2c3e50;
+    text-align: center;
+    padding: 40px 20px;
+    animation: bannerSlideIn 1s ease-out forwards;
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+/* Heading animation */
+.welcome-banner h2 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #a57c50, #d6b88b, #a57c50);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textGradient 3s infinite alternate, bounceIn 1.5s forwards;
+}
+
+/* Paragraph animation */
+.welcome-banner p {
+    font-size: 1.3em;
+    animation: fadeInUp 2s forwards;
+}
+
+/* Banner slide down */
+@keyframes bannerSlideIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Text gradient shimmer */
+@keyframes textGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Bounce in effect */
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    80% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* Paragraph fade up */
+@keyframes fadeInUp {
+    0% { transform: translateY(30px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .welcome-banner h2 { font-size: 2em; }
+    .welcome-banner p { font-size: 1em; }
+}
+
+/* Quote styling */
+.about-quote {
+    font-style: italic;
+    color: #3b3b3b;
+    font-size: 1.4em;
+    text-align: center;
+    max-width: 700px;
+    margin: 50px auto;
+    padding-left: 15px;
+
+}
+
+/* Side by side container */
+.about-content {
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+    gap: 40px;                
+    flex-wrap: wrap;     
+         
+}
+
+/* Text side */
+.about-text {
+    max-width: 500px;
+}
+
+/* Heading */
+#main-heading {
+    font-family: var(--heading-font-font-family);
+    font-size: 2.2em;
+    color: hsla(var(--accent-hsl), 1);
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+#h1-paragraph {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Image side */
+.about-image-container {
+    max-width: 500px;
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Mission */
+#mission {
+    max-width: 100%;
+    margin: 60px auto;
+    padding: 40px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #a57c50, #d6b88b, #a57c50); /* Soft, warm beige/soil brown */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    color: #3b3b3b; /* Dark text for readability */
+}
+
+#mission-heading {
+    font-size: 2em;
+    color:whitesmoke;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mission p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    margin-top: 40px;
+}
+
+.flip-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 250px;
+    height: 150px;
+    perspective: 1000px; /* Gives the 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    font-weight: bold;
+    font-size: 16px;
+   
+}
+
+.flip-card-front {
+    background-color: white;
+    color: hsla(143, 66%, 37%, 1);
+}
+
+.flip-card-back {
+    background-color: hsla(143, 66%, 37%, 1);
+    transform: rotateY(180deg);
+    font-weight: normal;
+    font-size: 14px;
+    color: white;
+}
+
+/* Responsive design for cards*/
+@media screen and (max-width: 768px) {
+    .flip-card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card {
+        width: 90%;  /* make card nearly full width */
+        height: 180px;
+        margin-bottom: 20px;
+    }
+
+    .flip-card-front, .flip-card-back {
+        font-size: 14px;
+    }
+}
+
+/* Contact Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.contact-form {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: hsla(var(--accent-hsl), 1);
+    outline: none;
+    box-shadow: 0 0 5px hsla(var(--accent-hsl), 0.5);
+}
+
+.contact-form button {
+    background-color: hsla(var(--accent-hsl), 1);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: hsla(var(--accent-hsl), 0.8);
+}
+
+.line {
+    border: none;
+    height: 2px;
+    background-color: hsla(var(--accent-hsl), 1);
+    margin-top: 40px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #about, #contribute {
+        padding: 20px 10px;
+    }
+}
+
+
+footer {
+    text-align: center;
+    background-color:white;
+    padding: 10px;
+}

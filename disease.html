@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diseases and Preventive Herbs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fdfbf7; /* soft beige/brown */
+        margin: 0;
+        padding: 0;
+        }
+
+        h1 {
+        text-align: center;
+        padding: 20px;
+        color: #5a3e2b;
+        text-shadow: 1px 1px #d9c6b3;
+        }
+
+        table {
+        width: 90%;
+        margin: 50px auto;
+        border-collapse: collapse;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        animation: fadeIn 1.2s ease-in;
+        }
+
+        th, td {
+        padding: 14px 18px;
+        text-align: left;
+        }
+
+        th {
+        background-color: #8d6e63; /* earthy brown */
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #f4ede7;
+        }
+
+        tr:nth-child(odd) {
+        background-color: #fffaf5;
+        }
+
+        tr:hover {
+        background-color: #e6dcd3;
+        transform: scale(1.01);
+        transition: all 0.3s ease;
+        }
+
+        td {
+        color: #3e2c23;
+        }
+
+        @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(15px); }
+        to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media screen and (max-width: 768px) {
+        table, th, td {
+            display: block;
+            width: 100%;
+        }
+        th {
+            position: sticky;
+            top: 0;
+        }
+        }
+    </style>
+</head>
+<!-- ...existing code... -->
+<body>
+    <header>
+        <div class="header-flex">
+            <h1><a href="index.html" class="header-logo">Ukuphila</a></h1>
+            <div class="nav-container">
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <nav id="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="disease.html">Diseases</a>
+                    <a href="herbs.html">Herbs</a>
+                    <a href="exercises.html">Exercises</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="welcome-banner">
+            <h2>Common Diseases🌿</h2>
+            <blockquote class="about-quote">
+                "Earth has no sorrow that earth cannot heal" – John Muir. 
+            </blockquote>
+        </div>
+
+        <section id="about">
+
+            
+            <div class="about-content">
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Diabetes</h1>
+                    <p id="h1-paragraph">
+                        A chronic condition that affects how the body processes blood sugar (glucose).
+                    </p>
+                </div>
+
+                <div class="about-image-container">
+                    <img src="/images/diabetes.jpg"  alt="Forest" class="about-image">
+                </div>
+            </div>
+        </section>
+                <section>
+
+            <br><br>
+            
+            <div class="about-content">
+                <div class="about-image-container">
+                    
+                    <img src="/images/Hypertension.jpg"  alt="Herbs" class="about-image">
+
+                </div>
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Hypertension</h1>
+                    <p id="h1-paragraph">
+                       High blood pressure, often with no symptoms,
+                        that can lead to serious complications.
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+        <br><br>
+        <section id="about">
+
+            
+            <div class="about-content">
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Malaria</h1>
+                    <p id="h1-paragraph">
+                       A mosquito-borne disease caused by parasites, leading to fever and chills.
+                    </p>
+                </div>
+
+                <div class="about-image-container">
+                    <img src="/images/Malaria.jpg"  alt="Forest" class="about-image">
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <br><br>
+            
+            <div class="about-content">
+                <div class="about-image-container">
+                    
+                    <img src="/images/Tuberculosis.jpg"  alt="Herbs" class="about-image">
+
+                </div>
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Tuberculosis (TB)</h1>
+                    <p id="h1-paragraph">
+                       An infectious disease that primarily affects the lungs but can spread to other organs.
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <br><br>
+        <section id="about">
+
+            
+            <div class="about-content">
+               
+                <div class="about-text">
+                    <h1 id="main-heading">HIV/AIDS</h1>
+                    <p id="h1-paragraph">
+                      A virus that attacks the body’s immune system, making it harder to fight infections
+                    </p>
+                </div>
+
+                <div class="about-image-container">
+                    <img src="/images/HIVAIDS.jpg"  alt="Forest" class="about-image">
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <br><br>
+            
+            <div class="about-content">
+                <div class="about-image-container">
+                    
+                    <img src="/images/Asthma.jpg"  alt="Herbs" class="about-image">
+
+                </div>
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Asthma</h1>
+                    <p id="h1-paragraph">
+                       A respiratory condition causing breathing difficulties due to airway inflammation.
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <br><br>
+        <section id="about">
+
+            
+            <div class="about-content">
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Cancer</h1>
+                    <p id="h1-paragraph">
+                       A group of diseases involving abnormal cell growth with the potential to spread.
+                    </p>
+                </div>
+
+                <div class="about-image-container">
+                    <img src="/images/Cancer.jpg"  alt="Forest" class="about-image">
+                </div>
+            </div>
+        </section>
+        <section>
+
+            <br><br>
+            
+            <div class="about-content">
+                <div class="about-image-container">
+                    
+                    <img src="/images/Influenza.jpg"  alt="Herbs" class="about-image">
+
+                </div>
+               
+                <div class="about-text">
+                    <h1 id="main-heading">Influenza (Flu)</h1>
+                    <p id="h1-paragraph">
+                       A contagious respiratory illness caused by influenza viruses.
+                    </p>
+                </div>
+
+
+            </div>
+        </section>
+
+        <table>
+            <tr>
+                <th>Disease</th>
+                <th>Recommended Herbs</th>
+                <th>Appropriate Exercises</th>
+            </tr>
+            <tr>
+                <td>Diabetes</td>
+                <td>Garlic, Turmeric, Moringa</td>
+                <td>Walking, Yoga (Pranayama), Cycling</td>
+            </tr>
+            <tr>
+                <td>Hypertension</td>
+                <td>Garlic, Rooibos, Ginger</td>
+                <td>Deep Breathing, Light Jogging</td>
+            </tr>
+            <tr>
+                <td>Malaria</td>
+                <td>Cloves, Moringa, Ginger</td>
+                <td>Light Walking, Yoga (after recovery)</td>
+            </tr>
+            <tr>
+                <td>Asthma</td>
+                <td>Peppermint, Rooibos, Tulsi</td>
+                <td>Breathing Exercises, Light Yoga</td>
+            </tr>
+            <tr>
+                <td>Tuberculosis</td>
+                <td>Aloe Vera, Garlic, Moringa</td>
+                <td>Breathing Exercises, Light Walking</td>
+            </tr>
+            <tr>
+                <td>Cancer</td>
+                <td>Turmeric, Moringa, Ginger</td>
+                <td>Yoga, Meditation</td>
+            </tr>
+            <tr>
+                <td>HIV/AIDS</td>
+                <td>Moringa, Garlic, Turmeric</td>
+                <td>Yoga, Meditation, Walking</td>
+            </tr>
+            <tr>
+                <td>Influenza</td>
+                <td>Ginger, Cloves, Peppermint</td>
+                <td>Rest, Restorative Yoga</td>    
+            </tr>
+            
+        </table>
+    </main>
+    
+
+    <hr class="line">
+    <footer>
+        <p>&copy; 2025 Ukuphila Africa. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+
+</html>

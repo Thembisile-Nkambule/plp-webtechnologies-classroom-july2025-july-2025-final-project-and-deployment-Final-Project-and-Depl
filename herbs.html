@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Herbs</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: 10px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            background: linear-gradient(90deg, #a57c50, #d6b88b, #a57c50);
+        }
+
+        /* Slides */
+        .mySlides {
+            width: 100%;
+            height: 400px;
+            display: none;
+            position: relative;
+        }
+
+        .mySlides img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        /* Caption */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Fade animation */
+        .fade {
+            animation: fadeEffect 1.5s ease-in-out;
+        }
+        .caption p {
+            font-size: 16px;
+            margin-top: 5px;
+            font-weight: normal;
+            color: #f0f0f0;
+            line-height: 1.4;
+        }
+
+
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+
+        /* Navigation arrows */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 12px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            border-radius: 0 3px 3px 0;
+            background: rgba(0,0,0,0.4);
+            user-select: none;
+            transition: 0.3s;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background: rgba(0,0,0,0.7);
+        }
+
+        /* Dots */
+        .dots {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 12px;
+            width: 12px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #2e7d32;
+        }
+        @media screen {
+            .caption {
+                font-size: 16px;
+                padding: 10px;
+            }
+            .mySlides img {
+                height: 300px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .slideshow-container img {
+                height: 250px;  /* smaller for mobile */
+            }
+            .mySlides {
+                height: 250px;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-flex">
+            <h1><a href="index.html" class="header-logo">Ukuphila</a></h1>
+            <div class="nav-container">
+                <div class="hamburger" id="hamburger">&#9776;</div>
+                <nav id="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="disease.html">Diseases</a>
+                    <a href="herbs.html">Herbs</a>
+                    <a href="exercises.html">Exercises</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        
+        <div class="welcome-banner">
+            <h2>Herbs🌿</h2>
+            <blockquote class="about-quote">
+                "Let food be thy medicine and medicine be thy food." – Hippocrates
+            </blockquote>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="/images/herbs/Turmeric.jpg" alt="Turmeric">
+                <div class="caption">
+                    <h3>Turmeric</h3>
+                    <p>Helps reduce inflammation and boosts immunity.</p>
+                </div>   
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/herbs/Garlic.jpg" alt="Garlic">
+                <div class="caption">
+                    <h3>Garlic</h3>
+                    <p>Supports heart health and fights infections.</p>
+                </div>
+            </div>
+           
+            
+            <div class="mySlides fade">
+                <img src="/images/herbs/Moringa.jpg" alt="Moringa">
+                <div class="caption">
+                    <h3>Moringa</h3>
+                    <p>Rich in vitamins and antioxidants, promotes overall wellness.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/herbs/Cloves.jpg" alt="Cloves">
+                <div class="caption">
+                    <h3>Cloves</h3>
+                    <p>Known for their antimicrobial and pain-relieving properties.</p>
+                </div>
+            </div>
+    
+            <div class="mySlides fade">
+                <img src="/images/herbs/Rooibos.jpg" alt="Rooibos">
+                <div class="caption">
+                    <h3>Rooibos</h3>
+                    <p>High in antioxidants, supports heart health and reduces inflammation.</p>
+                </div>
+            </div>
+           
+            <div class="mySlides fade">
+                <img src="/images/herbs/Ginger.jpg" alt="Ginger">
+                <div class="caption">
+                    <h3>Ginger</h3>
+                    <p>Aids digestion, reduces nausea, and has anti-inflammatory effects.</p>
+                </div>
+            </div>
+             
+           <div class="mySlides fade">
+                <img src="/images/herbs/Peppermint.jpg" alt="Peppermint">
+                <div class="caption">
+                    <h3>Peppermint</h3>
+                    <p>Relieves digestive issues and soothes headaches.</p>
+                </div>
+            </div>
+             
+            <div class="mySlides fade">
+                <img src="/images/herbs/Tulsi.jpg" alt="Tulsi">
+                <div class="caption">
+                    <h3>Tulsi</h3>
+                    <p>Boosts immunity, reduces stress, and promotes respiratory health.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/herbs/Aloe Vera.jpg" alt="Aloe Vera">
+                <div class="caption">
+                    <h3>Aloe Vera</h3>
+                    <p>Soothes skin irritations and supports digestive health.</p>
+                </div>
+            </div>
+
+              <!-- Next and Previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+            <span class="dot" onclick="currentSlide(7)"></span>
+            <span class="dot" onclick="currentSlide(8)"></span>
+        </div>
+        <script src="app.js"></script>
+    </main>
+
+
+    <hr class="line">
+    <footer>
+        <p>&copy; 2025 Ukuphila Africa. All rights reserved.</p>
+    </footer>
+</body>
+</html>
